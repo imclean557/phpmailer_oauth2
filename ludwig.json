@@ -1,0 +1,12 @@
+{
+    "require": {
+        "thephpleague/oauth2-client": {
+            "version": "v2.6.0",
+            "url": "https://github.com/thephpleague/oauth2-client/archive/2.6.0.zip"
+        },
+        "thenetworg/oauth2-azure": {
+            "version": "v2.0.1",
+            "url": "https://github.com/TheNetworg/oauth2-azure/archive/v2.0.1.zip"
+        }
+    }
+}
