@@ -1,0 +1,7 @@
+name: PHPMailer OAuth2
+description: OAuth2 client for PHPMailer SMTP
+type: module
+package: Mail
+core_version_requirement: ^8.8 || ^9
+dependencies:
+  - phpmailer_smtp:phpmailer_smtp (>=2.1.x)

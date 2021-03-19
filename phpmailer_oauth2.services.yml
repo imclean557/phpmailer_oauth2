@@ -1,0 +1,4 @@
+services:
+  phpmailer_oauth2.azure_provider:
+    class: Drupal\phpmailer_oauth2\Service\AzureProviderService
+    arguments: ['@config.factory', '@logger.factory', '@request_stack']

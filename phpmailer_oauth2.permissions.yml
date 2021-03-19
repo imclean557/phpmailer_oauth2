@@ -1,0 +1,3 @@
+administer phpmailer oauth2 settings:
+  title: 'Administer PHPMailer OAuth2 settings'
+  restrict access: TRUE

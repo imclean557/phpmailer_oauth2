@@ -1,0 +1,27 @@
+phpmailer_oauth2.settings:
+  path: '/admin/config/system/phpmailer-oauth2'
+  defaults:
+    _form: '\Drupal\phpmailer_oauth2\Form\Oauth2SettingsForm'
+    _title: 'Configure PHPMailer OAuth2 settings'
+  requirements:
+    _permission: 'administer phpmailer oauth2 settings'
+phpmailer_oauth2.aad_callback:
+  path: '/phpmailer_oauth2/aad-callback'
+  defaults:
+    _controller: '\Drupal\phpmailer_oauth2\Controller\MsOauth2CallbackController::callback'
+    _title: 'AAD OAuth2 SMTP callback'
+  requirements:
+    _permission: 'administer phpmailer oauth2 settings'
+  options:
+    no_cache: TRUE
+phpmailer_oauth2.aad_login:
+  path: '/phpmailer_oauth2/aad-login'
+  defaults:
+    _controller: 'Drupal\phpmailer_oauth2\Controller\MsLoginController::login'
+    _title: 'AAD Login'
+  requirements:
+    _permission: 'administer phpmailer oauth2 settings'
+  options:
+    no_cache: TRUE
+    
+    

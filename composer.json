@@ -1,0 +1,22 @@
+{
+  "name": "drupal/phpmailer_oauth2",
+  "type": "drupal-module",
+  "description": "OAuth2 client for the PHPMailer SMTP module.",
+  "homepage": "https://drupal.org/project/phpmailer_oauth2",
+  "license": "GPL-2.0+",
+  "require": {
+    "drupal/phpmailer_smtp": "^2.1.0",
+    "thenetworg/oauth2-azure": "^2.0.1"
+  },
+  "authors": [
+    {
+      "name": "Ian McLean (imclean)",
+      "homepage": "http://drupal.org/u/imclean"
+    }
+  ],
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/phpmailer_oauth2",
+    "source": "https://git.drupalcode.org/project/phpmailer_oauth2"
+  },
+  "keywords": ["drupal", "phpmailer", "smtp", "email", "mail", "mailsystem", "mail system"]
+}

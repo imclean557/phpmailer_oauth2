@@ -1,0 +1,5 @@
+phpmailer_oauth2.settings:
+  title: 'PHPMailer OAuth2'
+  route_name: phpmailer_oauth2.settings
+  parent: system.admin_config_system
+  description: "Configure the PHPMailer OAuth2 module."

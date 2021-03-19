@@ -1,0 +1,25 @@
+phpmailer_oauth2.settings:
+  type: config_object
+  label: 'PHPMailer OAuth2 Settings'
+  mapping:
+    ms_email_address:
+      type: string
+      label: 'Email address'
+    ms_client_id:
+      type: string
+      label: 'Client ID'
+    ms_tenant_id:
+      type: string
+      label: 'Tenant ID'
+    ms_client_secret:
+      type: string
+      label: 'Client secret'
+    ms_refresh_token:
+      type: string
+      label: 'Refresh token'
+    ms_access_token:
+      type: string
+      label: 'Accesss token'
+    ms_refresh_access_token:
+      type: string
+      label: 'Refresh access token'
