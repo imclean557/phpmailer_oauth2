@@ -18,5 +18,5 @@
     "issues": "https://www.drupal.org/project/issues/phpmailer_oauth2",
     "source": "https://git.drupalcode.org/project/phpmailer_oauth2"
   },
-  "keywords": ["drupal", "phpmailer", "smtp", "email", "mail", "mailsystem", "mail system"]
+  "keywords": ["drupal", "phpmailer", "smtp", "email", "mail", "mailsystem", "mail system", "oauth2"]
 }
