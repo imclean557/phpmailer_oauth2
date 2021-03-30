@@ -104,6 +104,7 @@ class Oauth2SettingsForm extends ConfigFormBase {
       '#type' => 'password',
       '#title' => $this->t('Client secret'),
       '#default_value' => $config->get('ms_client_secret'),
+      '#description' => $this->t('Leave empty to use the current secret.'),
     ];
 
     $form['ms_auth']['ms_tenant_id'] = [
@@ -133,8 +134,12 @@ class Oauth2SettingsForm extends ConfigFormBase {
     $config = $this->configFactory()->getEditable('phpmailer_oauth2.settings');
     $config->set('ms_email_address', $values['ms_email_address'])
       ->set('ms_client_id', $values['ms_client_id'])
-      ->set('ms_client_secret', $values['ms_client_secret'])
       ->set('ms_tenant_id', $values['ms_tenant_id']);
+
+    // Check if client secret is empty and don't overwrite current one if so.
+    if ($values['ms_client_secret'] !== '') {
+      $config->set('ms_client_secret', $values['ms_client_secret']);
+    }
 
     $config->save();
 
