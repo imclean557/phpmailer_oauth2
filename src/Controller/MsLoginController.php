@@ -42,7 +42,7 @@ class MsLoginController extends ControllerBase {
    *   Redirect to provider login.
    */
   public function login() {
-    $authorizationUrl = $this->azureProvider->getAuthorizationUrl(['scope' => $provider->scope]);
+    $authorizationUrl = $this->azureProvider->getAuthorizationUrl(['scope' => $this->azureProvider->scope]);
 
     return new TrustedRedirectResponse($authorizationUrl);
   }
