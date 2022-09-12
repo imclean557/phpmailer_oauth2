@@ -3,7 +3,7 @@
 namespace Drupal\phpmailer_oauth2\Service;
 
 use Drupal\Core\Config\ConfigFactoryInterface;
-use Drupal\Core\Logger\LoggerChannelFactory;
+use Drupal\Core\Logger\LoggerChannelFactoryInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 use TheNetworg\OAuth2\Client\Provider\Azure;
 
@@ -22,7 +22,7 @@ class AzureProviderService {
   /**
    * The logger interface.
    *
-   * @var \Drupal\Core\Logger\LoggerChannelFactory
+   * @var \Drupal\Core\Logger\LoggerChannelFactoryInterface
    */
   protected $logger;
 
@@ -43,7 +43,7 @@ class AzureProviderService {
    * @param \Symfony\Component\HttpFoundation\RequestStack $request_stack
    *   The request stack.
    */
-  public function __construct(ConfigFactoryInterface $config_factory, LoggerChannelFactory $logger_channel, RequestStack $request_stack) {
+  public function __construct(ConfigFactoryInterface $config_factory, LoggerChannelFactoryInterface $logger_channel, RequestStack $request_stack) {
     $this->configFactory = $config_factory;
     $this->logger = $logger_channel;
     $this->requestStack = $request_stack;
