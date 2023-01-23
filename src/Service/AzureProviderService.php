@@ -69,7 +69,7 @@ class AzureProviderService {
     $provider->urlAPI = 'https://graph.microsoft.com/';
     $provider->API_VERSION = '1.0';
     $provider->defaultEndPointVersion = $provider::ENDPOINT_VERSION_2_0;
-    $provider->scope = ['offline_access', 'https://outlook.office.com/SMTP.Send'];
+    $provider->scope = ['https://outlook.office.com/SMTP.Send', 'offline_access'];
 
     return $provider;
   }
@@ -93,7 +93,7 @@ class AzureProviderService {
     $provider->urlAPI = 'https://graph.microsoft.com/';
     $provider->API_VERSION = '1.0';
     $provider->defaultEndPointVersion = $provider::ENDPOINT_VERSION_2_0;
-    $provider->scope = ['offline_access', 'https://outlook.office.com/SMTP.Send'];
+    $provider->scope = ['https://outlook.office.com/SMTP.Send', 'offline_access'];
 
     return $provider;
   }
