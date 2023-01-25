@@ -4,6 +4,7 @@ namespace Drupal\phpmailer_oauth2\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Routing\TrustedRedirectResponse;
+use Drupal\Core\Url;
 use Drupal\phpmailer_oauth2\Service\AzureProviderService;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -42,7 +43,10 @@ class MsLoginController extends ControllerBase {
    *   Redirect to provider login.
    */
   public function login() {
-    $authorizationUrl = $this->azureProvider->getAuthorizationUrl(['scope' => $this->azureProvider->scope]);
+    $authorizationUrl = $this->azureProvider->getAuthorizationUrl([
+      'redirect_uri' => Url::fromRoute('phpmailer_oauth2.settings')->setAbsolute()->toString(),
+      'scope' => $this->azureProvider->scope,
+    ]);
 
     return new TrustedRedirectResponse($authorizationUrl);
   }

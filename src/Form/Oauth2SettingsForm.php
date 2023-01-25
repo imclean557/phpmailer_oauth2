@@ -90,6 +90,12 @@ class Oauth2SettingsForm extends ConfigFormBase {
       '#collapsible' => TRUE,
       '#collapsed' => TRUE,
     ];
+    $form['ms_auth']['info'] = [
+      '#type' => 'markup',
+      '#markup' => $this->t('The following Redirect URI must be added in Azure: <strong>:uri</strong>', [
+        ':uri' => Url::fromRoute('phpmailer_oauth2.aad_callback')->setAbsolute()->toString(),
+      ]),
+    ];
     $form['ms_auth']['ms_email_address'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Email address'),
@@ -106,7 +112,6 @@ class Oauth2SettingsForm extends ConfigFormBase {
       '#default_value' => $config->get('ms_client_secret'),
       '#description' => $this->t('Leave empty to use the current secret.'),
     ];
-
     $form['ms_auth']['ms_tenant_id'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Tenant ID'),
