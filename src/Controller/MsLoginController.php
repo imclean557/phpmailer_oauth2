@@ -44,7 +44,7 @@ class MsLoginController extends ControllerBase {
    */
   public function login() {
     $authorizationUrl = $this->azureProvider->getAuthorizationUrl([
-      'redirect_uri' => Url::fromRoute('phpmailer_oauth2.settings')->setAbsolute()->toString(),
+      'redirect_uri' => Url::fromRoute('phpmailer_oauth2.settings')->setAbsolute()->toString(TRUE),
       'scope' => $this->azureProvider->scope,
     ]);
 
